@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #24577a;
+    --secondary-color: #333333;
+    --accent-color: #f4f4f4;
+    --text-color: #222222;
+    --white: #ffffff;
+    --link-color: #0000ee;
+
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+/* Universal box sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Course title */
+#course-title {
+    display: block;
+    text-align: center;
+    padding: 12px 10px;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+/* Navigation links */
+nav a {
+    flex: 1;
+    padding: 8px 10px;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+/* Navigation hover effect */
+nav a:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Main */
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+/* Main heading */
+h1 {
+    margin: 10px 0 15px;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+/* Cards container */
+.cards {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+}
+
+/* Card */
+.card {
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+/* Card headings */
+.card h2 {
+    margin: 0;
+    padding: 8px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1rem;
+}
+
+/* About card content */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 125px;
+    gap: 20px;
+    padding: 16px;
+}
+
+/* About text */
+.about-text p {
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+/* Profile image */
+.profile-image {
+    width: 123px;
+    height: 166px;
+    object-fit: cover;
+    justify-self: center;
+}
+
+/* Location heading */
+.about-text h3 {
+    margin: 5px auto 10px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #bbbbbb;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1rem;
+}
+
+/* Location section */
+.location-content {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+/* Location paragraph */
+.location-content p {
+    margin: 0;
+}
+
+/* Figure */
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+/* Flag image */
+figure img {
+    width: 142px;
+    height: 85px;
+    object-fit: cover;
+    border: 1px solid #aaaaaa;
+}
+
+/* Figure caption */
+figcaption {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+/* Resources */
+.resources {
+    display: flex;
+    align-items: center;
+    min-height: 370px;
+    padding: 20px;
+}
+
+/* Resources list */
+.resources ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Resource links */
+.resources a {
+    color: var(--link-color);
+}
+
+/* Resource link hover */
+.resources a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+/* Footer paragraphs */
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Last modified */
+#lastModified {
+    color: #ffff00;
+    font-size: 0.8rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        justify-self: center;
+        order: -1;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    figure {
+        justify-self: center;
+    }
+
+    .resources {
+        min-height: auto;
+    }
+}
