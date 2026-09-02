@@ -4,6 +4,7 @@
 --accent-color: #f4a261;
 --light-color: #f1faee;
 --dark-color: #1d1d1d;
+--white-color: #ffffff;
 --heading-font: "Montserrat", sans-serif;
 --body-font: "Open Sans", sans-serif;
 }
@@ -21,7 +22,7 @@ background-color: #f8f9fa;
 
 header {
 background-color: var(--primary-color);
-color: white;
+color: var(--white-color);
 padding: 1rem;
 }
 
@@ -42,7 +43,7 @@ gap: 1rem;
 }
 
 nav a {
-color: white;
+color: var(--white-color);
 text-decoration: none;
 padding: 0.5rem 1rem;
 border-radius: 4px;
@@ -72,8 +73,8 @@ gap: 1.5rem;
 }
 
 .card {
-background-color: white;
-border: 1px solid #ddd;
+background-color: var(--white-color);
+border: 1px solid #dddddd;
 border-radius: 8px;
 padding: 1.5rem;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -141,7 +142,7 @@ color: var(--primary-color);
 
 footer {
 background-color: var(--primary-color);
-color: white;
+color: var(--white-color);
 text-align: center;
 padding: 1rem;
 margin-top: 2rem;
