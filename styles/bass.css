@@ -12,138 +12,156 @@
     --body-font: 'Open Sans', sans-serif;
 }
 
-/* Universal box sizing */
 * {
     box-sizing: border-box;
 }
 
-/* Body */
 body {
     margin: 0;
-    font-family: var(--body-font);
+    background-color: #ffffff;
     color: var(--text-color);
-    background-color: var(--white);
+    font-family: var(--body-font);
     line-height: 1.7;
 }
 
-/* Header */
+/* =========================
+   HEADER
+   ========================= */
+
 header {
     background-color: var(--primary-color);
     color: var(--white);
 }
 
-/* Course title */
 #course-title {
     display: block;
+    height: 59px;
+    padding-top: 10px;
     text-align: center;
-    padding: 12px 10px;
     font-family: var(--heading-font);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 500;
 }
 
-/* Navigation */
+/* =========================
+   NAVIGATION
+   ========================= */
+
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 40px;
     background-color: var(--secondary-color);
 }
 
-/* Navigation links */
 nav a {
     flex: 1;
-    padding: 8px 10px;
+    height: 40px;
+    padding: 4px 10px;
     color: var(--white);
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
     font-family: var(--heading-font);
     font-size: 1rem;
-    transition: background-color 0.3s ease,
-                color 0.3s ease;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
 }
 
-/* Navigation hover effect */
 nav a:hover {
     background-color: var(--white);
     color: var(--primary-color);
 }
 
-/* Main */
+/* =========================
+   MAIN
+   ========================= */
+
 main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 10px;
+    width: 960px;
+    max-width: calc(100% - 20px);
+    margin: 20px auto 0;
 }
 
-/* Main heading */
 h1 {
-    margin: 10px 0 15px;
+    margin: 0 0 14px;
     text-align: center;
     font-family: var(--heading-font);
     font-size: 2.1rem;
     font-weight: 500;
+    line-height: 1.3;
 }
 
-/* Cards container */
+/* =========================
+   CARDS
+   ========================= */
+
 .cards {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 8px;
 }
 
-/* Card */
 .card {
+    height: 435px;
+    overflow: hidden;
     border: 1px solid #aaaaaa;
     border-radius: 8px;
-    overflow: hidden;
     background-color: var(--white);
 }
 
-/* Card headings */
 .card h2 {
+    height: 42px;
     margin: 0;
-    padding: 8px;
+    padding: 6px 8px;
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
     font-family: var(--heading-font);
     font-size: 1rem;
+    line-height: 1.7;
 }
 
-/* About card content */
+/* =========================
+   ABOUT ME
+   ========================= */
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 125px;
     gap: 20px;
-    padding: 16px;
+    padding: 8px 16px 16px;
 }
 
-/* About text */
-.about-text p {
-    margin-top: 8px;
-    margin-bottom: 14px;
+.about-text {
+    font-size: 0.9rem;
 }
 
-/* Profile image */
+.about-text > p {
+    margin: 16px 0 14px;
+}
+
 .profile-image {
     width: 123px;
     height: 166px;
+    margin-top: 8px;
     object-fit: cover;
-    justify-self: center;
 }
 
-/* Location heading */
+/* =========================
+   LOCATION
+   ========================= */
+
 .about-text h3 {
-    margin: 5px auto 10px;
-    padding-bottom: 2px;
+    margin: 8px auto 10px;
+    padding-bottom: 1px;
     border-bottom: 1px solid #bbbbbb;
     text-align: center;
     font-family: var(--heading-font);
     font-size: 1rem;
+    line-height: 1.5;
 }
 
-/* Location section */
 .location-content {
     display: grid;
     grid-template-columns: 140px 1fr;
@@ -151,82 +169,99 @@ h1 {
     align-items: start;
 }
 
-/* Location paragraph */
 .location-content p {
-    margin: 0;
+    margin: 12px 0 0;
 }
 
-/* Figure */
+/* =========================
+   FLAG
+   ========================= */
+
 figure {
-    margin: 0;
+    width: 142px;
+    margin: 23px 0 0;
     text-align: center;
 }
 
-/* Flag image */
 figure img {
+    display: block;
     width: 142px;
     height: 85px;
     object-fit: cover;
     border: 1px solid #aaaaaa;
 }
 
-/* Figure caption */
 figcaption {
-    margin-top: 8px;
+    margin-top: 13px;
     font-size: 0.75rem;
     font-style: italic;
+    line-height: 1.7;
 }
 
-/* Resources */
+/* =========================
+   WEB DEVELOPMENT RESOURCES
+   ========================= */
+
 .resources {
     display: flex;
     align-items: center;
-    min-height: 370px;
+    height: 393px;
     padding: 20px;
 }
 
-/* Resources list */
 .resources ul {
     margin: 0;
     padding-left: 20px;
 }
 
-/* Resource links */
+.resources li {
+    line-height: 1.7;
+}
+
 .resources a {
     color: var(--link-color);
 }
 
-/* Resource link hover */
 .resources a:hover {
     color: var(--primary-color);
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+   ========================= */
+
 footer {
+    height: 72px;
     margin-top: 15px;
-    padding: 10px;
+    padding-top: 12px;
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
 }
 
-/* Footer paragraphs */
 footer p {
     margin: 0;
     line-height: 1.5;
 }
 
-/* Last modified */
 #lastModified {
-    color: #ffff00;
+    color: yellow;
     font-size: 0.8rem;
 }
 
-/* Responsive design */
+/* =========================
+   MOBILE
+   ========================= */
+
 @media screen and (max-width: 700px) {
+
+    main {
+        width: auto;
+    }
 
     nav {
         flex-direction: column;
+        height: auto;
     }
 
     nav a {
@@ -237,13 +272,17 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+    .card {
+        height: auto;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
     }
 
     .profile-image {
-        justify-self: center;
         order: -1;
+        justify-self: center;
     }
 
     .location-content {
@@ -255,6 +294,10 @@ footer p {
     }
 
     .resources {
-        min-height: auto;
+        height: auto;
+    }
+
+    footer {
+        height: auto;
     }
 }
